@@ -8,13 +8,13 @@ const server = http.createServer((req, res) => {
     console.log('server req')
 
     res.setHeader('Content-Type', 'text/html')
-    res.setHeader('Content-Type: application/json')
+    // res.setHeader('Content-Type: application/json')
 
     const createPath = (page) => path.resolve(__dirname, 'pages', `${page}.html`)
-    //некоторые файловые системы используют прямую косую черту, а некоторые обратную!
+    //некоторые файловые системы используют прямую косую черту, а некоторые обратную
     let basePath = ''
 
-    // базовая имплементация роутинга
+    // базовая имплементация маршрутизации
     switch (req.url) {
         case '/':
         case '/main':
